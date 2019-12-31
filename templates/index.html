@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h3>Users in DB:</h3>
+{% if users %}
+  {% for user in users %}
+    User ID: {{ user.id }} User name: {{ user.name }}<br>
+  {% endfor %}
+{% endif %}
+
+<br>
+
+<form method="POST" action="/">
+  <b>User name:</b><br>
+  <input type='TextField' name='name'>
+  <button type="submit">Add</button>
+</form>
+
+</body>
+</html>
